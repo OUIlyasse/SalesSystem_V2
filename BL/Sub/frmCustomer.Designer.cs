@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.lnkChoose = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.txtNote = new DevExpress.XtraEditors.MemoEdit();
+            this.txtFacebook = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtFax = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone = new DevExpress.XtraEditors.TextEdit();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -52,49 +57,53 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStatus = new DevExpress.XtraEditors.TextEdit();
+            this.txtBalance = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCredit = new DevExpress.XtraEditors.TextEdit();
+            this.txtDebit = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbxCountry = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
+            this.validateData = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFacebook.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBalance.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCredit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDebit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validateData)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.hyperlinkLabelControl1);
-            this.groupControl1.Controls.Add(this.pictureBox1);
-            this.groupControl1.Controls.Add(this.memoEdit1);
-            this.groupControl1.Controls.Add(this.textEdit8);
-            this.groupControl1.Controls.Add(this.textEdit9);
-            this.groupControl1.Controls.Add(this.textEdit7);
-            this.groupControl1.Controls.Add(this.textEdit6);
-            this.groupControl1.Controls.Add(this.textEdit5);
-            this.groupControl1.Controls.Add(this.textEdit4);
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.cmbxCountry);
+            this.groupControl1.Controls.Add(this.lnkChoose);
+            this.groupControl1.Controls.Add(this.picImage);
+            this.groupControl1.Controls.Add(this.txtNote);
+            this.groupControl1.Controls.Add(this.txtFacebook);
+            this.groupControl1.Controls.Add(this.txtEmail);
+            this.groupControl1.Controls.Add(this.txtFax);
+            this.groupControl1.Controls.Add(this.txtPhone);
+            this.groupControl1.Controls.Add(this.txtCity);
+            this.groupControl1.Controls.Add(this.txtAddress);
+            this.groupControl1.Controls.Add(this.txtName);
+            this.groupControl1.Controls.Add(this.txtCode);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl9);
@@ -111,95 +120,117 @@
             this.groupControl1.Size = new System.Drawing.Size(903, 378);
             this.groupControl1.TabIndex = 0;
             // 
-            // hyperlinkLabelControl1
+            // lnkChoose
             // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(761, 277);
-            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(51, 21);
-            this.hyperlinkLabelControl1.TabIndex = 9;
-            this.hyperlinkLabelControl1.Text = "Choose";
+            this.lnkChoose.Location = new System.Drawing.Point(761, 277);
+            this.lnkChoose.Name = "lnkChoose";
+            this.lnkChoose.Size = new System.Drawing.Size(51, 21);
+            this.lnkChoose.TabIndex = 9;
+            this.lnkChoose.Text = "Choose";
             // 
-            // pictureBox1
+            // picImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(696, 35);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(180, 230);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 236);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picImage.Location = new System.Drawing.Point(696, 35);
+            this.picImage.MinimumSize = new System.Drawing.Size(180, 230);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(180, 236);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 21;
+            this.picImage.TabStop = false;
+            this.toolTipController1.SetToolTip(this.picImage, "Choose Logo for your Customer");
             // 
-            // memoEdit1
+            // txtNote
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(162, 317);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(714, 50);
-            this.memoEdit1.TabIndex = 8;
+            this.txtNote.Location = new System.Drawing.Point(162, 317);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(714, 50);
+            this.txtNote.TabIndex = 8;
+            this.txtNote.ToolTip = "Enter Note";
+            this.txtNote.ToolTipController = this.toolTipController1;
             // 
-            // textEdit8
+            // txtFacebook
             // 
-            this.textEdit8.Location = new System.Drawing.Point(473, 270);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(201, 28);
-            this.textEdit8.TabIndex = 7;
+            this.txtFacebook.Location = new System.Drawing.Point(473, 270);
+            this.txtFacebook.Name = "txtFacebook";
+            this.txtFacebook.Size = new System.Drawing.Size(201, 28);
+            this.txtFacebook.TabIndex = 7;
+            this.txtFacebook.ToolTip = "Enter Facebbok for Customer";
+            this.txtFacebook.ToolTipController = this.toolTipController1;
             // 
-            // textEdit9
+            // txtEmail
             // 
-            this.textEdit9.Location = new System.Drawing.Point(162, 270);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(201, 28);
-            this.textEdit9.TabIndex = 6;
+            this.txtEmail.Location = new System.Drawing.Point(162, 270);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(201, 28);
+            this.txtEmail.TabIndex = 6;
+            this.txtEmail.ToolTip = "Enter E-mail for Customer";
+            this.txtEmail.ToolTipController = this.toolTipController1;
             // 
-            // textEdit7
+            // txtFax
             // 
-            this.textEdit7.Location = new System.Drawing.Point(473, 223);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(201, 28);
-            this.textEdit7.TabIndex = 5;
+            this.txtFax.Location = new System.Drawing.Point(473, 223);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.Size = new System.Drawing.Size(201, 28);
+            this.txtFax.TabIndex = 5;
+            this.txtFax.ToolTip = "Enter Fax Number";
+            this.txtFax.ToolTipController = this.toolTipController1;
             // 
-            // textEdit6
+            // txtPhone
             // 
-            this.textEdit6.Location = new System.Drawing.Point(162, 223);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(201, 28);
-            this.textEdit6.TabIndex = 4;
+            this.txtPhone.Location = new System.Drawing.Point(162, 223);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(201, 28);
+            this.txtPhone.TabIndex = 4;
+            this.txtPhone.ToolTip = "Enter Phone Number";
+            this.txtPhone.ToolTipController = this.toolTipController1;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtPhone, conditionValidationRule1);
             // 
-            // textEdit5
+            // txtCity
             // 
-            this.textEdit5.Location = new System.Drawing.Point(473, 176);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(201, 28);
-            this.textEdit5.TabIndex = 3;
+            this.txtCity.Location = new System.Drawing.Point(162, 176);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(201, 28);
+            this.txtCity.TabIndex = 2;
+            this.txtCity.ToolTip = "Enter City";
+            this.txtCity.ToolTipController = this.toolTipController1;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtCity, conditionValidationRule2);
             // 
-            // textEdit4
+            // txtAddress
             // 
-            this.textEdit4.Location = new System.Drawing.Point(162, 176);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(201, 28);
-            this.textEdit4.TabIndex = 2;
+            this.txtAddress.Location = new System.Drawing.Point(162, 129);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(512, 28);
+            this.txtAddress.TabIndex = 1;
+            this.txtAddress.ToolTip = "Enter Address";
+            this.txtAddress.ToolTipController = this.toolTipController1;
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtAddress, conditionValidationRule3);
             // 
-            // textEdit3
+            // txtName
             // 
-            this.textEdit3.Location = new System.Drawing.Point(162, 129);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(512, 28);
-            this.textEdit3.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(162, 82);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(512, 28);
+            this.txtName.TabIndex = 0;
+            this.txtName.ToolTip = "Enter Customer Name";
+            this.txtName.ToolTipController = this.toolTipController1;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtName, conditionValidationRule4);
             // 
-            // textEdit2
+            // txtCode
             // 
-            this.textEdit2.Location = new System.Drawing.Point(162, 82);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(512, 28);
-            this.textEdit2.TabIndex = 0;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(162, 35);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(201, 28);
-            this.textEdit1.TabIndex = 11;
+            this.txtCode.Location = new System.Drawing.Point(162, 35);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Properties.ReadOnly = true;
+            this.txtCode.Size = new System.Drawing.Size(201, 28);
+            this.txtCode.TabIndex = 11;
             // 
             // labelControl11
             // 
@@ -305,11 +336,11 @@
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.Controls.Add(this.textEdit13);
-            this.groupControl2.Controls.Add(this.textEdit12);
+            this.groupControl2.Controls.Add(this.txtStatus);
+            this.groupControl2.Controls.Add(this.txtBalance);
             this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.textEdit11);
-            this.groupControl2.Controls.Add(this.textEdit10);
+            this.groupControl2.Controls.Add(this.txtCredit);
+            this.groupControl2.Controls.Add(this.txtDebit);
             this.groupControl2.Controls.Add(this.labelControl12);
             this.groupControl2.Controls.Add(this.labelControl13);
             this.groupControl2.Controls.Add(this.labelControl14);
@@ -320,21 +351,21 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Client Balance Movement";
             // 
-            // textEdit13
+            // txtStatus
             // 
-            this.textEdit13.Location = new System.Drawing.Point(744, 40);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.ReadOnly = true;
-            this.textEdit13.Size = new System.Drawing.Size(126, 28);
-            this.textEdit13.TabIndex = 27;
+            this.txtStatus.Location = new System.Drawing.Point(744, 40);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Properties.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(126, 28);
+            this.txtStatus.TabIndex = 27;
             // 
-            // textEdit12
+            // txtBalance
             // 
-            this.textEdit12.Location = new System.Drawing.Point(528, 40);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Properties.ReadOnly = true;
-            this.textEdit12.Size = new System.Drawing.Size(126, 28);
-            this.textEdit12.TabIndex = 26;
+            this.txtBalance.Location = new System.Drawing.Point(528, 40);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Properties.ReadOnly = true;
+            this.txtBalance.Size = new System.Drawing.Size(126, 28);
+            this.txtBalance.TabIndex = 26;
             // 
             // labelControl6
             // 
@@ -346,21 +377,21 @@
             this.labelControl6.TabIndex = 25;
             this.labelControl6.Text = "Status";
             // 
-            // textEdit11
+            // txtCredit
             // 
-            this.textEdit11.Location = new System.Drawing.Point(301, 40);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Properties.ReadOnly = true;
-            this.textEdit11.Size = new System.Drawing.Size(126, 28);
-            this.textEdit11.TabIndex = 24;
+            this.txtCredit.Location = new System.Drawing.Point(301, 40);
+            this.txtCredit.Name = "txtCredit";
+            this.txtCredit.Properties.ReadOnly = true;
+            this.txtCredit.Size = new System.Drawing.Size(126, 28);
+            this.txtCredit.TabIndex = 24;
             // 
-            // textEdit10
+            // txtDebit
             // 
-            this.textEdit10.Location = new System.Drawing.Point(86, 40);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.ReadOnly = true;
-            this.textEdit10.Size = new System.Drawing.Size(126, 28);
-            this.textEdit10.TabIndex = 23;
+            this.txtDebit.Location = new System.Drawing.Point(86, 40);
+            this.txtDebit.Name = "txtDebit";
+            this.txtDebit.Properties.ReadOnly = true;
+            this.txtDebit.Size = new System.Drawing.Size(126, 28);
+            this.txtDebit.TabIndex = 23;
             // 
             // labelControl12
             // 
@@ -392,6 +423,20 @@
             this.labelControl14.TabIndex = 13;
             this.labelControl14.Text = "Debit";
             // 
+            // cmbxCountry
+            // 
+            this.cmbxCountry.Location = new System.Drawing.Point(473, 176);
+            this.cmbxCountry.Name = "cmbxCountry";
+            this.cmbxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbxCountry.Size = new System.Drawing.Size(201, 28);
+            this.cmbxCountry.TabIndex = 22;
+            this.cmbxCountry.ToolTip = "Enter Country Name";
+            this.cmbxCountry.ToolTipController = this.toolTipController1;
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.cmbxCountry, conditionValidationRule6);
+            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -406,24 +451,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFacebook.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBalance.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCredit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDebit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validateData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -432,16 +478,15 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.MemoEdit txtNote;
+        private DevExpress.XtraEditors.TextEdit txtFacebook;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.TextEdit txtFax;
+        private DevExpress.XtraEditors.TextEdit txtPhone;
+        private DevExpress.XtraEditors.TextEdit txtCity;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtCode;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -455,12 +500,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
+        private System.Windows.Forms.PictureBox picImage;
+        private DevExpress.XtraEditors.HyperlinkLabelControl lnkChoose;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.TextEdit txtCredit;
+        private DevExpress.XtraEditors.TextEdit txtDebit;
+        private DevExpress.XtraEditors.TextEdit txtStatus;
+        private DevExpress.XtraEditors.TextEdit txtBalance;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbxCountry;
+        private DevExpress.Utils.ToolTipController toolTipController1;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider validateData;
     }
 }
