@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,14 +53,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db\Customer.cs">
+      <DependentUpon>Sales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Sales.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Sales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Sales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Select_Customer_By_Code_Result.cs">
+      <DependentUpon>Sales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Db\Select_Customer_Result.cs">
+      <DependentUpon>Sales.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Db\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="Db\Sales.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sales.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Db\Sales.edmx.diagram">
+      <DependentUpon>Sales.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Db\Sales.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Sales.Context.cs</LastGenOutput>
+      <DependentUpon>Sales.edmx</DependentUpon>
+    </Content>
+    <Content Include="Db\Sales.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sales.edmx</DependentUpon>
+      <LastGenOutput>Sales.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

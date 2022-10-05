@@ -44,6 +44,9 @@
     <Reference Include="DevExpress.XtraBars.v20.1" />
     <Reference Include="DevExpress.Sparkline.v20.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -63,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="iSub\iListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iSub\iListForm.Designer.cs">
+      <DependentUpon>iListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sub\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +98,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sub\frmListCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sub\frmListCustomers.Designer.cs">
+      <DependentUpon>frmListCustomers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="iSub\iListForm.resx">
+      <DependentUpon>iListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sub\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sub\frmListCustomers.resx">
+      <DependentUpon>frmListCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,7 +144,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DL\DL.csproj">
+      <Project>{A4880AF5-0771-47C6-9C33-FB549D0044AF}</Project>
+      <Name>DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iTools\iTools.csproj">
+      <Project>{8bf0fc5a-28c0-4335-a58e-0553b231ac4b}</Project>
+      <Name>iTools</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 
 namespace BL.iSub
 {
@@ -16,6 +17,21 @@ namespace BL.iSub
         }
         public virtual void Load_Data()
         {
+        }
+        public virtual void verifyButtons(XtraForm f, string txt)
+        {
+            if (f.Text == txt)
+            {
+                btnAdd.Enabled = true;
+                btnDelete.Enabled = false;
+                btnUpdate.Enabled = false;
+            }
+            else
+            {
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = true;
+                btnUpdate.Enabled = true;
+            }
         }
         #endregion Code
         public iForm()
@@ -41,6 +57,11 @@ namespace BL.iSub
         private void iForm_Activated(object sender, EventArgs e)
         {
             Load_Data();
+        }
+
+        private void iForm_Load(object sender, EventArgs e)
+        {
+            verifyButtons(new XtraForm(), "");
         }
     }
 }

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SalesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="cust_ID" />
+          </Key>
+          <Property Name="cust_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cust_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cust_Name" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="cust_Address" Type="nvarchar(max)" />
+          <Property Name="cust_City" Type="nvarchar(max)" />
+          <Property Name="cust_Country" Type="nvarchar(max)" />
+          <Property Name="cust_Phone" Type="nvarchar(max)" />
+          <Property Name="cust_Fax" Type="nvarchar(max)" />
+          <Property Name="cust_Facebok" Type="nvarchar(max)" />
+          <Property Name="cust_Email" Type="nvarchar(max)" />
+          <Property Name="cust_Note" Type="nvarchar(max)" />
+          <Property Name="cust_Image" Type="image" />
+          <Property Name="cust_Pc_Name_Added" Type="nvarchar(max)" />
+          <Property Name="cust_Pc_Name_Modified" Type="nvarchar(max)" />
+          <Property Name="cust_Pc_Name_Deleted" Type="nvarchar(max)" />
+          <Property Name="cust_User_Added" Type="nvarchar(max)" />
+          <Property Name="cust_User_Modified" Type="nvarchar(max)" />
+          <Property Name="cust_User_Deleted" Type="nvarchar(max)" />
+          <Property Name="cust_Credit" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Debit" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Balance" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Status" Type="bit" />
+        </EntityType>
+        <Function Name="Delete_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cust_Code" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Delete_Customer_Completely" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cust_Code" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Insert_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cust_Code" Type="nvarchar" Mode="In" />
+          <Parameter Name="cust_Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="cust_Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_City" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Country" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Phone" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Fax" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Facebok" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Note" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Image" Type="image" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Added" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Modified" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Deleted" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Added" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Modified" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Deleted" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Credit" Type="decimal" Mode="In" />
+          <Parameter Name="cust_Debit" Type="decimal" Mode="In" />
+          <Parameter Name="cust_Balance" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="MaxID_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Customer_By_Code" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cust_Code" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Update_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cust_Code" Type="nvarchar" Mode="In" />
+          <Parameter Name="cust_Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="cust_Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_City" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Country" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Phone" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Fax" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Facebok" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Note" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Image" Type="image" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Added" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Modified" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Pc_Name_Deleted" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Added" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Modified" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_User_Deleted" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cust_Credit" Type="decimal" Mode="In" />
+          <Parameter Name="cust_Debit" Type="decimal" Mode="In" />
+          <Parameter Name="cust_Balance" Type="decimal" Mode="In" />
+        </Function>
+        <EntityContainer Name="SalesModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SalesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="cust_ID" />
+          </Key>
+          <Property Name="cust_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cust_Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cust_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Fax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Facebok" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="cust_Pc_Name_Added" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Pc_Name_Modified" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Pc_Name_Deleted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_User_Added" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_User_Modified" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_User_Deleted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cust_Credit" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Debit" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Balance" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="cust_Status" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="SalesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <FunctionImport Name="Delete_Customer">
+          <Parameter Name="cust_Code" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Delete_Customer_Completely">
+          <Parameter Name="cust_Code" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Insert_Customer">
+            <Parameter Name="cust_Code" Mode="In" Type="String" />
+            <Parameter Name="cust_Name" Mode="In" Type="String" />
+            <Parameter Name="cust_Address" Mode="In" Type="String" />
+            <Parameter Name="cust_City" Mode="In" Type="String" />
+            <Parameter Name="cust_Country" Mode="In" Type="String" />
+            <Parameter Name="cust_Phone" Mode="In" Type="String" />
+            <Parameter Name="cust_Fax" Mode="In" Type="String" />
+            <Parameter Name="cust_Facebok" Mode="In" Type="String" />
+            <Parameter Name="cust_Email" Mode="In" Type="String" />
+            <Parameter Name="cust_Note" Mode="In" Type="String" />
+            <Parameter Name="cust_Image" Mode="In" Type="Binary" />
+            <Parameter Name="cust_Pc_Name_Added" Mode="In" Type="String" />
+            <Parameter Name="cust_Pc_Name_Modified" Mode="In" Type="String" />
+            <Parameter Name="cust_Pc_Name_Deleted" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Added" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Modified" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Deleted" Mode="In" Type="String" />
+            <Parameter Name="cust_Credit" Mode="In" Type="Decimal" />
+            <Parameter Name="cust_Debit" Mode="In" Type="Decimal" />
+            <Parameter Name="cust_Balance" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="Update_Customer">
+            <Parameter Name="cust_Code" Mode="In" Type="String" />
+            <Parameter Name="cust_Name" Mode="In" Type="String" />
+            <Parameter Name="cust_Address" Mode="In" Type="String" />
+            <Parameter Name="cust_City" Mode="In" Type="String" />
+            <Parameter Name="cust_Country" Mode="In" Type="String" />
+            <Parameter Name="cust_Phone" Mode="In" Type="String" />
+            <Parameter Name="cust_Fax" Mode="In" Type="String" />
+            <Parameter Name="cust_Facebok" Mode="In" Type="String" />
+            <Parameter Name="cust_Email" Mode="In" Type="String" />
+            <Parameter Name="cust_Note" Mode="In" Type="String" />
+            <Parameter Name="cust_Image" Mode="In" Type="Binary" />
+            <Parameter Name="cust_Pc_Name_Added" Mode="In" Type="String" />
+            <Parameter Name="cust_Pc_Name_Modified" Mode="In" Type="String" />
+            <Parameter Name="cust_Pc_Name_Deleted" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Added" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Modified" Mode="In" Type="String" />
+            <Parameter Name="cust_User_Deleted" Mode="In" Type="String" />
+            <Parameter Name="cust_Credit" Mode="In" Type="Decimal" />
+            <Parameter Name="cust_Debit" Mode="In" Type="Decimal" />
+            <Parameter Name="cust_Balance" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="MaxID_Customer" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="Select_Customer" ReturnType="Collection(SalesModel.Select_Customer_Result)" />
+          <FunctionImport Name="Select_Customer_By_Code" EntitySet="Customer" ReturnType="Collection(SalesModel.Customer)">
+            <Parameter Name="cust_Code" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="Select_Customer_Result">
+          <Property Type="String" Name="cust_Code" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cust_Name" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="cust_Address" Nullable="true" />
+          <Property Type="String" Name="cust_City" Nullable="true" />
+          <Property Type="String" Name="cust_Country" Nullable="true" />
+          <Property Type="String" Name="cust_Phone" Nullable="true" />
+          <Property Type="String" Name="cust_Fax" Nullable="true" />
+          <Property Type="String" Name="cust_Facebok" Nullable="true" />
+          <Property Type="String" Name="cust_Email" Nullable="true" />
+          <Property Type="String" Name="cust_Note" Nullable="true" />
+          <Property Type="Binary" Name="cust_Image" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="cust_Pc_Name_Added" Nullable="true" />
+          <Property Type="String" Name="cust_Pc_Name_Modified" Nullable="true" />
+          <Property Type="String" Name="cust_Pc_Name_Deleted" Nullable="true" />
+          <Property Type="String" Name="cust_User_Added" Nullable="true" />
+          <Property Type="String" Name="cust_User_Modified" Nullable="true" />
+          <Property Type="String" Name="cust_User_Deleted" Nullable="true" />
+          <Property Type="Decimal" Name="cust_Credit" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="cust_Debit" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="cust_Balance" Nullable="true" Precision="18" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="Select_Customer_By_Code_Result">
+          <Property Type="String" Name="cust_Code" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cust_Name" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="cust_Address" Nullable="true" />
+          <Property Type="String" Name="cust_City" Nullable="true" />
+          <Property Type="String" Name="cust_Country" Nullable="true" />
+          <Property Type="String" Name="cust_Phone" Nullable="true" />
+          <Property Type="String" Name="cust_Fax" Nullable="true" />
+          <Property Type="String" Name="cust_Facebok" Nullable="true" />
+          <Property Type="String" Name="cust_Email" Nullable="true" />
+          <Property Type="String" Name="cust_Note" Nullable="true" />
+          <Property Type="Binary" Name="cust_Image" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="cust_Pc_Name_Added" Nullable="true" />
+          <Property Type="String" Name="cust_Pc_Name_Modified" Nullable="true" />
+          <Property Type="String" Name="cust_Pc_Name_Deleted" Nullable="true" />
+          <Property Type="String" Name="cust_User_Added" Nullable="true" />
+          <Property Type="String" Name="cust_User_Modified" Nullable="true" />
+          <Property Type="String" Name="cust_User_Deleted" Nullable="true" />
+          <Property Type="Decimal" Name="cust_Credit" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="cust_Debit" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="cust_Balance" Nullable="true" Precision="18" Scale="3" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SalesModelStoreContainer" CdmEntityContainer="SalesEntities">
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="SalesModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="cust_ID" ColumnName="cust_ID" />
+                <ScalarProperty Name="cust_Code" ColumnName="cust_Code" />
+                <ScalarProperty Name="cust_Name" ColumnName="cust_Name" />
+                <ScalarProperty Name="cust_Address" ColumnName="cust_Address" />
+                <ScalarProperty Name="cust_City" ColumnName="cust_City" />
+                <ScalarProperty Name="cust_Country" ColumnName="cust_Country" />
+                <ScalarProperty Name="cust_Phone" ColumnName="cust_Phone" />
+                <ScalarProperty Name="cust_Fax" ColumnName="cust_Fax" />
+                <ScalarProperty Name="cust_Facebok" ColumnName="cust_Facebok" />
+                <ScalarProperty Name="cust_Email" ColumnName="cust_Email" />
+                <ScalarProperty Name="cust_Note" ColumnName="cust_Note" />
+                <ScalarProperty Name="cust_Image" ColumnName="cust_Image" />
+                <ScalarProperty Name="cust_Pc_Name_Added" ColumnName="cust_Pc_Name_Added" />
+                <ScalarProperty Name="cust_Pc_Name_Modified" ColumnName="cust_Pc_Name_Modified" />
+                <ScalarProperty Name="cust_Pc_Name_Deleted" ColumnName="cust_Pc_Name_Deleted" />
+                <ScalarProperty Name="cust_User_Added" ColumnName="cust_User_Added" />
+                <ScalarProperty Name="cust_User_Modified" ColumnName="cust_User_Modified" />
+                <ScalarProperty Name="cust_User_Deleted" ColumnName="cust_User_Deleted" />
+                <ScalarProperty Name="cust_Credit" ColumnName="cust_Credit" />
+                <ScalarProperty Name="cust_Debit" ColumnName="cust_Debit" />
+                <ScalarProperty Name="cust_Balance" ColumnName="cust_Balance" />
+                <ScalarProperty Name="cust_Status" ColumnName="cust_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="SalesModel.Customer">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="SalesModel.Store.Insert_Customer">
+                  <ScalarProperty Name="cust_Balance" ParameterName="cust_Balance" />
+                  <ScalarProperty Name="cust_Debit" ParameterName="cust_Debit" />
+                  <ScalarProperty Name="cust_Credit" ParameterName="cust_Credit" />
+                  <ScalarProperty Name="cust_User_Deleted" ParameterName="cust_User_Deleted" />
+                  <ScalarProperty Name="cust_User_Modified" ParameterName="cust_User_Modified" />
+                  <ScalarProperty Name="cust_User_Added" ParameterName="cust_User_Added" />
+                  <ScalarProperty Name="cust_Pc_Name_Deleted" ParameterName="cust_Pc_Name_Deleted" />
+                  <ScalarProperty Name="cust_Pc_Name_Modified" ParameterName="cust_Pc_Name_Modified" />
+                  <ScalarProperty Name="cust_Pc_Name_Added" ParameterName="cust_Pc_Name_Added" />
+                  <ScalarProperty Name="cust_Image" ParameterName="cust_Image" />
+                  <ScalarProperty Name="cust_Note" ParameterName="cust_Note" />
+                  <ScalarProperty Name="cust_Email" ParameterName="cust_Email" />
+                  <ScalarProperty Name="cust_Facebok" ParameterName="cust_Facebok" />
+                  <ScalarProperty Name="cust_Fax" ParameterName="cust_Fax" />
+                  <ScalarProperty Name="cust_Phone" ParameterName="cust_Phone" />
+                  <ScalarProperty Name="cust_Country" ParameterName="cust_Country" />
+                  <ScalarProperty Name="cust_City" ParameterName="cust_City" />
+                  <ScalarProperty Name="cust_Address" ParameterName="cust_Address" />
+                  <ScalarProperty Name="cust_Name" ParameterName="cust_Name" />
+                  <ScalarProperty Name="cust_Code" ParameterName="cust_Code" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="SalesModel.Store.Update_Customer">
+                  <ScalarProperty Name="cust_Balance" ParameterName="cust_Balance" Version="Current" />
+                  <ScalarProperty Name="cust_Debit" ParameterName="cust_Debit" Version="Current" />
+                  <ScalarProperty Name="cust_Credit" ParameterName="cust_Credit" Version="Current" />
+                  <ScalarProperty Name="cust_User_Deleted" ParameterName="cust_User_Deleted" Version="Current" />
+                  <ScalarProperty Name="cust_User_Modified" ParameterName="cust_User_Modified" Version="Current" />
+                  <ScalarProperty Name="cust_User_Added" ParameterName="cust_User_Added" Version="Current" />
+                  <ScalarProperty Name="cust_Pc_Name_Deleted" ParameterName="cust_Pc_Name_Deleted" Version="Current" />
+                  <ScalarProperty Name="cust_Pc_Name_Modified" ParameterName="cust_Pc_Name_Modified" Version="Current" />
+                  <ScalarProperty Name="cust_Pc_Name_Added" ParameterName="cust_Pc_Name_Added" Version="Current" />
+                  <ScalarProperty Name="cust_Image" ParameterName="cust_Image" Version="Current" />
+                  <ScalarProperty Name="cust_Note" ParameterName="cust_Note" Version="Current" />
+                  <ScalarProperty Name="cust_Email" ParameterName="cust_Email" Version="Current" />
+                  <ScalarProperty Name="cust_Facebok" ParameterName="cust_Facebok" Version="Current" />
+                  <ScalarProperty Name="cust_Fax" ParameterName="cust_Fax" Version="Current" />
+                  <ScalarProperty Name="cust_Phone" ParameterName="cust_Phone" Version="Current" />
+                  <ScalarProperty Name="cust_Country" ParameterName="cust_Country" Version="Current" />
+                  <ScalarProperty Name="cust_City" ParameterName="cust_City" Version="Current" />
+                  <ScalarProperty Name="cust_Address" ParameterName="cust_Address" Version="Current" />
+                  <ScalarProperty Name="cust_Name" ParameterName="cust_Name" Version="Current" />
+                  <ScalarProperty Name="cust_Code" ParameterName="cust_Code" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="SalesModel.Store.Delete_Customer_Completely">
+                  <ScalarProperty Name="cust_Code" ParameterName="cust_Code" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Delete_Customer" FunctionName="SalesModel.Store.Delete_Customer" />
+          <FunctionImportMapping FunctionImportName="Delete_Customer_Completely" FunctionName="SalesModel.Store.Delete_Customer_Completely" />
+          <FunctionImportMapping FunctionImportName="Insert_Customer" FunctionName="SalesModel.Store.Insert_Customer" />
+          <FunctionImportMapping FunctionImportName="Update_Customer" FunctionName="SalesModel.Store.Update_Customer" />
+          <FunctionImportMapping FunctionImportName="MaxID_Customer" FunctionName="SalesModel.Store.MaxID_Customer" />
+          <FunctionImportMapping FunctionImportName="Select_Customer" FunctionName="SalesModel.Store.Select_Customer">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SalesModel.Select_Customer_Result">
+                <ScalarProperty Name="cust_Code" ColumnName="cust_Code" />
+                <ScalarProperty Name="cust_Name" ColumnName="cust_Name" />
+                <ScalarProperty Name="cust_Address" ColumnName="cust_Address" />
+                <ScalarProperty Name="cust_City" ColumnName="cust_City" />
+                <ScalarProperty Name="cust_Country" ColumnName="cust_Country" />
+                <ScalarProperty Name="cust_Phone" ColumnName="cust_Phone" />
+                <ScalarProperty Name="cust_Fax" ColumnName="cust_Fax" />
+                <ScalarProperty Name="cust_Facebok" ColumnName="cust_Facebok" />
+                <ScalarProperty Name="cust_Email" ColumnName="cust_Email" />
+                <ScalarProperty Name="cust_Note" ColumnName="cust_Note" />
+                <ScalarProperty Name="cust_Image" ColumnName="cust_Image" />
+                <ScalarProperty Name="cust_Pc_Name_Added" ColumnName="cust_Pc_Name_Added" />
+                <ScalarProperty Name="cust_Pc_Name_Modified" ColumnName="cust_Pc_Name_Modified" />
+                <ScalarProperty Name="cust_Pc_Name_Deleted" ColumnName="cust_Pc_Name_Deleted" />
+                <ScalarProperty Name="cust_User_Added" ColumnName="cust_User_Added" />
+                <ScalarProperty Name="cust_User_Modified" ColumnName="cust_User_Modified" />
+                <ScalarProperty Name="cust_User_Deleted" ColumnName="cust_User_Deleted" />
+                <ScalarProperty Name="cust_Credit" ColumnName="cust_Credit" />
+                <ScalarProperty Name="cust_Debit" ColumnName="cust_Debit" />
+                <ScalarProperty Name="cust_Balance" ColumnName="cust_Balance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Customer_By_Code" FunctionName="SalesModel.Store.Select_Customer_By_Code">
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

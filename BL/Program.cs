@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using BL.Main;
+using System;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
 
 namespace BL
 {
@@ -17,7 +14,7 @@ namespace BL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmTest());
         }
     }
 }

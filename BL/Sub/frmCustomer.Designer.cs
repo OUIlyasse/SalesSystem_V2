@@ -33,10 +33,12 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lnkChoose = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.cmbxCountry = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.picImage = new System.Windows.Forms.PictureBox();
+            this.lnkChoose = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.txtNote = new DevExpress.XtraEditors.MemoEdit();
             this.txtFacebook = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
@@ -65,11 +67,11 @@
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbxCountry = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.validateData = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.ofdImages = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFacebook.Properties)).BeginInit();
@@ -86,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBalance.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCredit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validateData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,13 +121,19 @@
             this.groupControl1.Size = new System.Drawing.Size(903, 378);
             this.groupControl1.TabIndex = 0;
             // 
-            // lnkChoose
+            // cmbxCountry
             // 
-            this.lnkChoose.Location = new System.Drawing.Point(761, 277);
-            this.lnkChoose.Name = "lnkChoose";
-            this.lnkChoose.Size = new System.Drawing.Size(51, 21);
-            this.lnkChoose.TabIndex = 9;
-            this.lnkChoose.Text = "Choose";
+            this.cmbxCountry.Location = new System.Drawing.Point(473, 176);
+            this.cmbxCountry.Name = "cmbxCountry";
+            this.cmbxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbxCountry.Size = new System.Drawing.Size(201, 28);
+            this.cmbxCountry.TabIndex = 22;
+            this.cmbxCountry.ToolTip = "Enter Country Name";
+            this.cmbxCountry.ToolTipController = this.toolTipController1;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.cmbxCountry, conditionValidationRule1);
             // 
             // picImage
             // 
@@ -139,6 +146,15 @@
             this.picImage.TabIndex = 21;
             this.picImage.TabStop = false;
             this.toolTipController1.SetToolTip(this.picImage, "Choose Logo for your Customer");
+            // 
+            // lnkChoose
+            // 
+            this.lnkChoose.Location = new System.Drawing.Point(761, 277);
+            this.lnkChoose.Name = "lnkChoose";
+            this.lnkChoose.Size = new System.Drawing.Size(51, 21);
+            this.lnkChoose.TabIndex = 9;
+            this.lnkChoose.Text = "Choose";
+            this.lnkChoose.Click += new System.EventHandler(this.lnkChoose_Click);
             // 
             // txtNote
             // 
@@ -184,9 +200,9 @@
             this.txtPhone.TabIndex = 4;
             this.txtPhone.ToolTip = "Enter Phone Number";
             this.txtPhone.ToolTipController = this.toolTipController1;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This field is empty";
-            this.validateData.SetValidationRule(this.txtPhone, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtPhone, conditionValidationRule2);
             // 
             // txtCity
             // 
@@ -196,9 +212,9 @@
             this.txtCity.TabIndex = 2;
             this.txtCity.ToolTip = "Enter City";
             this.txtCity.ToolTipController = this.toolTipController1;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This field is empty";
-            this.validateData.SetValidationRule(this.txtCity, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtCity, conditionValidationRule3);
             // 
             // txtAddress
             // 
@@ -208,9 +224,9 @@
             this.txtAddress.TabIndex = 1;
             this.txtAddress.ToolTip = "Enter Address";
             this.txtAddress.ToolTipController = this.toolTipController1;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "This field is empty";
-            this.validateData.SetValidationRule(this.txtAddress, conditionValidationRule3);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtAddress, conditionValidationRule4);
             // 
             // txtName
             // 
@@ -220,9 +236,9 @@
             this.txtName.TabIndex = 0;
             this.txtName.ToolTip = "Enter Customer Name";
             this.txtName.ToolTipController = this.toolTipController1;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "This field is empty";
-            this.validateData.SetValidationRule(this.txtName, conditionValidationRule4);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "This field is empty";
+            this.validateData.SetValidationRule(this.txtName, conditionValidationRule5);
             // 
             // txtCode
             // 
@@ -423,19 +439,9 @@
             this.labelControl14.TabIndex = 13;
             this.labelControl14.Text = "Debit";
             // 
-            // cmbxCountry
+            // ofdImages
             // 
-            this.cmbxCountry.Location = new System.Drawing.Point(473, 176);
-            this.cmbxCountry.Name = "cmbxCountry";
-            this.cmbxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbxCountry.Size = new System.Drawing.Size(201, 28);
-            this.cmbxCountry.TabIndex = 22;
-            this.cmbxCountry.ToolTip = "Enter Country Name";
-            this.cmbxCountry.ToolTipController = this.toolTipController1;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "This field is empty";
-            this.validateData.SetValidationRule(this.cmbxCountry, conditionValidationRule6);
+            this.ofdImages.RestoreDirectory = true;
             // 
             // frmCustomer
             // 
@@ -446,11 +452,13 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "frmCustomer";
             this.Text = "---";
+            this.Load += new System.EventHandler(this.frmCustomer_Load);
             this.Controls.SetChildIndex(this.groupControl1, 0);
             this.Controls.SetChildIndex(this.groupControl2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFacebook.Properties)).EndInit();
@@ -468,7 +476,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBalance.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCredit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbxCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validateData)).EndInit();
             this.ResumeLayout(false);
 
@@ -510,5 +517,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit cmbxCountry;
         private DevExpress.Utils.ToolTipController toolTipController1;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider validateData;
+        private System.Windows.Forms.OpenFileDialog ofdImages;
     }
 }
